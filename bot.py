@@ -156,7 +156,6 @@ def build_app(token: str) -> Application:
 
 
 if __name__ == "__main__":
-    BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
-    if BOT_TOKEN == "YOUR_BOT_TOKEN_HERE":
-        raise SystemExit("Please set BOT_TOKEN to your real BotFather token.")
+    # Bot token set as requested by user
+    BOT_TOKEN = "8413258612:AAFzX_I3VGeObBymm_vTNINDOeZJE2XELXQ"
     asyncio.run(build_app(BOT_TOKEN).run_polling(allowed_updates=Update.ALL_TYPES))
