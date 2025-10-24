@@ -156,6 +156,8 @@ def build_app(token: str) -> Application:
 
 
 if __name__ == "__main__":
-    # Bot token set as requested by user
+    # Bot token set as requested by user (left unchanged)
     BOT_TOKEN = "8413258612:AAFzX_I3VGeObBymm_vTNINDOeZJE2XELXQ"
-    asyncio.run(build_app(BOT_TOKEN).run_polling(allowed_updates=Update.ALL_TYPES))
+    app = build_app(BOT_TOKEN)
+    # run_polling is a blocking helper that manages the event loop internally
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
